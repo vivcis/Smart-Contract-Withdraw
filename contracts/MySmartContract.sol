@@ -16,4 +16,11 @@ contract MySmartContract {
     function getData() external view returns (uint256) {
         return data;
     }
+
+    // Withdraw function to transfer funds to the caller
+    function withdraw() external {
+        require(data > 0, "No funds to withdraw");
+        payable(msg.sender).transfer(data);
+        data = 0;
+    }
 }

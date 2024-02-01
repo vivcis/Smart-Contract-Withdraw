@@ -4,7 +4,7 @@ import ConnectButton from './components/ConnectButton';
 import WithdrawButton from './components/WithdrawButton';
 
 function App() {
-  const contractAddress = '0x97A6B774c9acb225723B61d140f9ED5F6126E4ea';
+  const contractAddress = '0x43378F742cf50078836850a7c222227d779dDf5E';
   const contractABI = [
     {
       "constant": true,
@@ -18,6 +18,15 @@ function App() {
       ],
       "payable": false,
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
   ];
